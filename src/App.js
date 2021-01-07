@@ -70,7 +70,7 @@ function App() {
   const articlesApi = (term) =>
     `https://hn.algolia.com/api/v1/search?query=${term}`
 
-  const [query, setQuery] = useState("redux")
+  const [query, setQuery] = useState("")
 
   const [{ data, isLoading, isError }, doFetch] = useDataApi(
     articlesApi(query),
